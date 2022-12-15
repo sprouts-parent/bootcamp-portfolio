@@ -2,6 +2,7 @@
 <html lang="en-gb">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ray Walvin: Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./assets/style.css">
     </head>
@@ -24,6 +25,7 @@
                 <a href="#">Contact Me</a>
             </div>
         </nav>
+        <div id="contentGrid">
         <!--About Me-->
         <section class="about-me">
             <img src="./assets/images/raypic.png" alt="A sideways profile photograph of Ray Walvin">
@@ -31,25 +33,25 @@
             <p>Insert text here.</p>
         </section>
         <!--My Work-->
-        <section class="my-work">
+        <section class="nestedGrid" id="my-work">
             <h2>My Work</h2>
-                <div id="app1">
+                <div id="app1" class="nestedapp">
                     <h3>Application 1</h3>
                         <p>Short description</p>
                 </div>
-                <div id="app2">
+                <div id="app2" class="nestedapp">
                     <h3>Application 2</h3>
                         <p>Short description</p>
                 </div>
-                <div id="app3">
+                <div id="app3" class="nestedapp">
                     <h3>Application 3</h3>
                         <p>Short description</p>
                 </div>
-                <div id="app4">
+                <div id="app4" class="nestedapp">
                     <h3>Application 4</h3>
                         <p>Short description</p>
                 </div>
-                <div id="app5">
+                <div id="app5" class="nestedapp">
                     <h3>Application 5</h3>
                         <p>Short description</p>
                 </div>
@@ -68,6 +70,7 @@
                 </div>
 
         </section>
+        </div>
         <!--Footer-->
         <footer>
             <p>This page is brought to you by Sprout's Parent, 2022</p>
