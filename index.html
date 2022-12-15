@@ -27,54 +27,55 @@
                 <a href="#">Contact Me</a>
             </div>
         </nav>
-        <div id="contentGrid">
+        <!--I produced a wireframe schematic shortly after beginning this project to make it easier for me to visualise CSS grids etc. So I am now going through my HTML again to rejig it and structure the content with css grid. Wish me luck...-->
+        <section class="contentGrid">
         <!--About Me-->
-        <section id="about-me">
-            <h2 id="aboutHeading">About Me</h2>
+            <div class="content" id="about-me">
+                <h2 id="aboutHeading">About Me</h2>
                 <p id="aboutText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <img id=prof-pic src="./assets/images/raypic.png" alt="A sideways profile photograph of Ray Walvin">
-        </section>
+                <img id=prof-pic src="./assets/images/raypic.png" alt="A sideways profile photograph of Ray Walvin">
+            </div>
         <!--My Work-->
-        <section class="nestedGrid" id="my-work">
-            <h2>My Work</h2>
-            <div class="nestedapp">
-                <div id="app1">
-                    <h3>Application 1</h3>
+            <div class="content" id="my-work">
+                <h2>My Work</h2>
+                <div class="nestedapp">
+                    <div id="app1">
+                        <h3>Application 1</h3>
                         <p>Short description</p>
-                </div>
-                <div id="app2" class="nestedapp">
-                    <h3>Application 2</h3>
+                    </div>
+                    <div id="app2" class="nestedapp">
+                        <h3>Application 2</h3>
                         <p>Short description</p>
-                </div>
-                <div id="app3" class="nestedapp">
-                    <h3>Application 3</h3>
+                    </div>
+                    <div id="app3" class="nestedapp">
+                        <h3>Application 3</h3>
                         <p>Short description</p>
-                </div>
-                <div id="app4" class="nestedapp">
-                    <h3>Application 4</h3>
+                    </div>
+                    <div id="app4" class="nestedapp">
+                        <h3>Application 4</h3>
                         <p>Short description</p>
-                </div>
-                <div id="app5" class="nestedapp">
-                    <h3>Application 5</h3>
+                    </div>
+                    <div id="app5" class="nestedapp">
+                        <h3>Application 5</h3>
                         <p>Short description</p>
+                    </div>
                 </div>
             </div>
-        </section>
         <!--Contact Me-->
-        <section id="contact-me" class="contactGrid">
-            <h2>Contact Me</h2>
-                <div id="email">
-                    <a href="mailto:rjwalvin@gmail.com">Send me an email!</a>
-                </div>
-                <div id="linkedin">
-                    <a href="#">Follow me on LinkedIn</a>
-                </div>
-                <div id="github">
-                    <a href="#">My Github</a>
-                </div>
+            <div class="content" id="contact-me">
+                <h2>Contact Me</h2>
+                    <div id="email">
+                        <a href="mailto:rjwalvin@gmail.com">Send me an email!</a>
+                    </div>
+                    <div id="linkedin">
+                        <a href="#">Follow me on LinkedIn</a>
+                    </div>
+                    <div id="github">
+                        <a href="#">My Github</a>
+                    </div>
 
+            </div>
         </section>
-        </div>
         <!--Footer-->
         <footer>
             <p>This page is brought to you by Sprout's Parent, 2022</p>
