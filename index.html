@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ray Walvin: Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./assets/style.css">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Varela+Round">
     </head>
     <body>
         <!--Header-->
@@ -14,7 +16,7 @@
             </div>
         </header>
         <!--Navigation bar-->
-        <nav>
+        <nav class="flexbox">
             <div class="left">
                 <a href="#">About Me</a>
             </div>
@@ -27,10 +29,10 @@
         </nav>
         <div id="contentGrid">
         <!--About Me-->
-        <section class="about-me">
-            <img src="./assets/images/raypic.png" alt="A sideways profile photograph of Ray Walvin">
-            <h2>About Me</h2>
-            <p>Insert text here.</p>
+        <section id="about-me">
+            <img id=prof-pic src="./assets/images/raypic.png" alt="A sideways profile photograph of Ray Walvin">
+            <h2 id="aboutHeading">About Me</h2>
+            <p id="aboutText">Insert text here.</p>
         </section>
         <!--My Work-->
         <section class="nestedGrid" id="my-work">
@@ -57,7 +59,7 @@
                 </div>
         </section>
         <!--Contact Me-->
-        <section class="contact-me">
+        <section id="contact-me">
             <h2>Contact Me</h2>
                 <div class="email">
                     <a href="mailto:rjwalvin@gmail.com">Send me an email!</a>
