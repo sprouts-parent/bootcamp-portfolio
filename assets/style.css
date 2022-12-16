@@ -1,25 +1,35 @@
+/*After learning about variables in class, I decided it would be handy to make my own root variables for the colour scheme of my portfolio, as I feel it would make it easier for me to tweak the colour scheme*/
+
+:root {
+    --bg: #f5f5f5;
+    --main: #71d7b0;
+    --minor: #ffb5b5;
+    --shadow: #7f7f7f;
+    --text: black;
+}
+
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #f5f5f5;
+    background-color: var(--bg);
 }
 /*header section*/
 header {
-    background-color: #71d7b0;
+    background-color: var(--main);
     margin-top: 0px;
 }
 
 h1 {
-    color: #f5f5f5;
+    color: var(--bg);
     font-family: 'Varela Round', sans-serif;
     font-size: 60px;
-    text-shadow: 2px 2px #7f7f7f;
+    text-shadow: 2px 2px var(--shadow);
     padding-left: 20px;
     margin: 0px;
 }
-/*nav bar*/
+/*nav bar: I went with flexbox to arrange the navigation bar*/
 nav {
-   background-color: #ffb5b5;
+   background-color: var(--minor);
    height: 40px; 
 }
 
@@ -34,14 +44,14 @@ nav {
     padding: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
-    text-shadow: 1px 1px #7f7f7f;
-    color: #f5f5f5;
+    text-shadow: 1px 1px var(--shadow);
+    color: var(--bg);
     text-decoration: none;
 }
 
 .flexbox a:hover {
-    color: #7f7f7f;
-    text-shadow: 1px 1px #f5f5f5;
+    color: var(--shadow);
+    text-shadow: 1px 1px var(--bg);
 }
 /*content area - I created a simple CSS grid to arrange each content card of the portfolio*/
 .contentGrid {
@@ -52,11 +62,11 @@ nav {
     "contact-me my-work";
 }
 
-#about-me {
+.about-me {
     grid-area: about-me;
 }
 
-#my-work {
+.my-work {
     grid-area: my-work;
 }
 
@@ -96,36 +106,82 @@ nav {
 }
 
 h2{
-    color: #f5f5f5;
+    color: var(--bg);
     font-family: 'Varela Round', sans-serif;
     font-size: 40px;
-    text-shadow: 2px 2px #7f7f7f;
+    text-shadow: 2px 2px var(--shadow);
     padding-left: 30px;
 }
 
 p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
+    color: var(--text);
     margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
 }
 
 .about-me, #contact-me {
-    background-color: #71d7b0;
+    background-color: var(--main);
     margin: 30px;
     border-radius: 25px;
-    box-shadow: 2px 2px #7f7f7f;
+    box-shadow: 2px 2px var(--shadow);
 }
-
-#my-work {
-    background-color: #ffb5b5;
+/* Created a nested grid for the my work section. The first application has to span the top row as outlined in the brief*/
+.my-work {
+    background-color: var(--minor);
     margin: 30px;
     border-radius: 25px;
-    box-shadow: 2px 2px #7f7f7f;
+    box-shadow: 2px 2px var(--shadow);
 }
 
-#my-work h2 {
+.nestedapp {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+    "app1 app1"
+    "app2 app3"
+    "app4 app5";
+}
+#workHeading {
+    grid-area: workHeading;
+}
+
+#app1 {
+    grid-area: app1;
+    background-image: url(./images/placeholder.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#app2, #app3, #app4, #app5 {
+    background-image: url(./images/placeholder.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#app2 {
+    grid-area: app2;
+}
+
+#app3 {
+    grid-area: app3;
+}
+
+#app4 {
+    grid-area: app4;
+}
+
+#app5 {
+    grid-area: app5;
+}
+
+.my-work h2 {
     text-align: right;
     padding-right: 30px;
     margin-top: 20px;
@@ -133,28 +189,23 @@ p {
 
 h3 {
     font-family: 'Varela Round', sans-serif;
-    color: #7f7f7f;
-    text-shadow: 1px 1px #f5f5f5;
+    color: var(--bg);
+    text-shadow: 1px 1px var(--shadow);
 }
 
-.contactGrid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    flex-direction: row-reverse;
-    align-items: center;
-
-}
-
-#email, #linkedin, #github {
-    display: inline;
+.content #contactme {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     text-align: center;
     align-content: center;
     margin: 10px;
-    box-shadow: 2px 2px #7f7f7f;
+    box-shadow: 2px 2px var(--shadow);
 }
 
 #email {
+    margin: 20px;
+    padding: 50px;
     background-image: url(./images/email.jpeg);
     background-size: cover; 
     background-repeat: no-repeat;
@@ -163,6 +214,8 @@ h3 {
 }
 
 #linkedin {
+    margin: 20px;
+    padding: 50px;
     background-image: url(./images/linkedin.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -170,6 +223,8 @@ h3 {
 }
 
 #github {
+    margin: 20px;
+    padding: 50px;
     background-image: url(./images/coding.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -179,15 +234,15 @@ h3 {
 #contact-me a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
-    color: #f5f5f5;
+    color: var(--bg);
     font-size: 18px;
-    text-shadow: 1px 1px #7f7f7f;
+    text-shadow: 1px 1px var(--shadow);
 
 }
 
 #contact-me a:hover {
-    color: #7f7f7f;
-    text-shadow: 1px 1px #f5f5f5;
+    color: var(--shadow);
+    text-shadow: 1px 1px var(--bg);
 }
 
 footer p {
