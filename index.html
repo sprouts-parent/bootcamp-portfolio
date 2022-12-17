@@ -18,19 +18,19 @@
         <!--Navigation bar-->
         <nav class="flexbox">
             <div class="left">
-                <a href="#">About Me</a>
+                <a href="#scrollAbout">About Me</a>
             </div>
             <div class="center">
-                <a href="#">My Work</a>
+                <a href="#scrollWork">My Work</a>
             </div>
             <div class="right">
-                <a href="#">Contact Me</a>
+                <a href="#scrollContact">Contact Me</a>
             </div>
         </nav>
         <!--I produced a wireframe schematic shortly after beginning this project to make it easier for me to visualise CSS grids etc. So I am now going through my HTML again to rejig it and structure the content with css grid. Wish me luck...-->
         <section class="contentGrid">
         <!--About Me-->
-            <div class="about-me">
+            <div class="about-me" id="scrollAbout">
                 <div id="aboutHeading">
                     <h2>About Me</h2>
                 </div>
@@ -42,10 +42,11 @@
                 </span>
             </div>
         <!--My Work-->
-            <div class="my-work">
+            <div class="my-work"  id="scrollWork">
                 <div id="workHeading">
                     <h2>My Work</h2>
                 </div>
+        <!--Originally I used the background-image function in CSS to provide images for my work but instead I am going to use actual image links with titles-->
                 <div class="nestedapp">
                     <div id="app1">
                         <h3>Application 1</h3>
@@ -70,7 +71,7 @@
                 </div>
             </div>
         <!--Contact Me-->
-            <div class="content" id="contact-me">
+            <div class="contact-me" id="scrollContact">
                 <h2>Contact Me</h2>
                     <div id="email">
                         <a href="mailto:rjwalvin@gmail.com">Send me an email!</a>
