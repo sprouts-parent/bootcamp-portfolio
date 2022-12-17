@@ -8,6 +8,12 @@
     --text: black;
 }
 
+/*added smooth scroll to the entire page so that when the links in the nav bar are clicked, it isn't an abrupt transition*/
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -70,7 +76,7 @@ nav {
     grid-area: my-work;
 }
 
-#contact-me {
+.contact-me {
     grid-area: contact-me;
 }
 
@@ -121,7 +127,7 @@ p {
     padding-right: 30px;
 }
 
-.about-me, #contact-me {
+.about-me, .contact-me {
     background-color: var(--main);
     margin: 30px;
     border-radius: 25px;
@@ -193,7 +199,7 @@ h3 {
     text-shadow: 1px 1px var(--shadow);
 }
 
-.content #contactme {
+.contactme {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -231,7 +237,7 @@ h3 {
     border-radius: 10px;
 }
 
-#contact-me a {
+.contact-me a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     color: var(--bg);
@@ -240,7 +246,7 @@ h3 {
 
 }
 
-#contact-me a:hover {
+.contact-me a:hover {
     color: var(--shadow);
     text-shadow: 1px 1px var(--bg);
 }
