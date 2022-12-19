@@ -20,6 +20,8 @@ N/A
 
 ## Usage
 
+The link to my deployed github portfolio is: https://sprouts-parent.github.io/bootcamp-portfolio/
+
 My portfolio contains a navigation bar which will smooth scroll to the relevant section of the page once a link is clicked. The links in the navigation bar also change colour when the cursor hovers over them.
 
 The "My Work" section will eventually contain links to my completed projects, but for now they are placeholders! Each application link is an image with a title overlay which appears when the cursor hovers over the image.
