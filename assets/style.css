@@ -294,3 +294,36 @@ footer p {
     margin-bottom: 20px;
     margin-top: 10px;
 }
+
+/* added some media queries to make my page more responsive to smaller screens. the navigation bar will disappear on screens smaller than 750px and the content in the about me and my work sections will display in blocks/singular column.*/
+
+@media only screen and (max-width: 750px) {
+   
+    .flexbox {
+        display: none;
+        margin-left: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    header {
+      position: static;
+    }
+
+    .about-me {
+        display: block;
+    }
+
+    .nestedapp {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "workHeading"
+        "app1"
+        "app2"
+        "app3"
+        "app4"
+        "app5"
+      ;
+    }*/
+  }
